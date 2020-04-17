@@ -1,0 +1,19 @@
+<h1>there are {{ count }} words in your text</h1>
+
+<a href="{% url 'home' %}">  Start again </a>
+<br/>
+<a href="{% url 'about' %}">  About this website </a>
+<br/>
+
+<h1>your text:</h1>
+{{ fulltext }}
+
+
+<h1>word count</h1>
+
+{% for word, counttotal in sdic %}
+
+{{ word }} - {{ counttotal }}
+<br/>
+
+{% endfor %}
